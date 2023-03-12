@@ -64,8 +64,11 @@ namespace SummatorOfNumberNUnitTests
             var result = driver.FindElement(By.CssSelector("#result > pre")).Text;
 
             Assert.IsNotEmpty(result);
+            Assert.AreEqual(result, "23");
             Assert.IsNotEmpty(input1);
+            Assert.AreEqual(input1, "15");
             Assert.IsNotEmpty(input2);
+            Assert.AreEqual(input2, "8");
 
             driver.FindElement(By.Id("resetButton")).Click();
 
